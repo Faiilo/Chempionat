@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - BestGames</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40">
+                    <rect x="5" y="5" width="30" height="30" rx="5" fill="#6C63FF"/>
+                    <circle cx="15" cy="15" r="3" fill="white"/>
+                    <circle cx="25" cy="25" r="3" fill="white"/>
+                    <line x1="18" y1="22" x2="22" y2="18" stroke="white" stroke-width="2"/>
+                </svg>
+                <span>BestGames</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог игр</a></li>
+                    <li><a href="index_light.html">Светлая тема</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="profile-section">
+                <h2>Личный кабинет</h2>
+                
+                <div class="profile-info">
+                    <h3>Информация о пользователе</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>E-mail:</label>
+                            <span>user@example.com</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Фамилия:</label>
+                            <span>Иванов</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Имя:</label>
+                            <span>Иван</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Дата рождения:</label>
+                            <span>15.03.1995</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Номер телефона:</label>
+                            <span>+7 (912) 345-67-89</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="purchase-history">
+                    <h3>История покупок</h3>
+                    <div class="history-list">
+                        <div class="history-item">
+                            <div class="history-date">12.01.2024</div>
+                            <div class="history-game">Cyberpunk 2077</div>
+                            <div class="history-price">2999 ₽</div>
+                        </div>
+                        <div class="history-item">
+                            <div class="history-date">05.01.2024</div>
+                            <div class="history-game">The Witcher 3</div>
+                            <div class="history-price">1999 ₽</div>
+                        </div>
+                        <div class="history-item">
+                            <div class="history-date">28.12.2023</div>
+                            <div class="history-game">Elden Ring</div>
+                            <div class="history-price">3999 ₽</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-settings">
+                    <h3>Настройки профиля</h3>
+                    <div class="settings-grid">
+                        <button class="btn btn-secondary">Сменить пароль</button>
+                        <div class="theme-switcher">
+                            <label>Тема:</label>
+                            <select id="theme-select">
+                                <option value="dark">Темная</option>
+                                <option value="light">Светлая</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('theme-select').addEventListener('change', function() {
+            if (this.value === 'light') {
+                window.location.href = 'index_light.html';
+            }
+        });
+    </script>
+</body>
+</html>

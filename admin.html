@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ панель - BestGames</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40">
+                    <rect x="5" y="5" width="30" height="30" rx="5" fill="#6C63FF"/>
+                    <circle cx="15" cy="15" r="3" fill="white"/>
+                    <circle cx="25" cy="25" r="3" fill="white"/>
+                    <line x1="18" y1="22" x2="22" y2="18" stroke="white" stroke-width="2"/>
+                </svg>
+                <span>BestGames - Админ</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная сайта</a></li>
+                    <li><a href="profile.html">Выйти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="admin-panel">
+                <h2>Добавление новой игры</h2>
+                
+                <form class="admin-form">
+                    <div class="form-group">
+                        <label for="game-name">Название игры *</label>
+                        <input type="text" id="game-name" name="game-name" required maxlength="30">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="game-genre">Жанр *</label>
+                        <select id="game-genre" name="game-genre" required>
+                            <option value="">Выберите жанр</option>
+                            <option value="rpg">RPG</option>
+                            <option value="action">Экшен</option>
+                            <option value="strategy">Стратегия</option>
+                            <option value="adventure">Приключения</option>
+                            <option value="sports">Спортивные</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="game-image">Изображение *</label>
+                        <input type="file" id="game-image" name="game-image" accept="image/jpeg" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="game-developer">Компания-разработчик *</label>
+                        <input type="text" id="game-developer" name="game-developer" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="game-description">Описание</label>
+                        <textarea id="game-description" name="game-description" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="game-price">Стоимость *</label>
+                        <input type="number" id="game-price" name="game-price" step="0.01" min="0" required>
+                    </div>
+                    
+                    <button type="submit" class="btn">Добавить игру</button>
+                </form>
+
+                <div class="admin-stats">
+                    <h3>Статистика</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">156</div>
+                            <div class="stat-label">Всего игр</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">892</div>
+                            <div class="stat-label">Пользователей</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">1,245</div>
+                            <div class="stat-label">Продаж</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
